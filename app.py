@@ -213,16 +213,16 @@ async def on_message(message):
 
 @client.event
 async def on_ready():
-    if WOW_API_KEY == 'ugauvsk23gqa56euhvp3w5beerw3v8aw':
+    if WOW_API_KEY == '':
         print('Missing World of Warcraft API key. Please refer to https://github.com/JamesIves/discord-wow-armory-bot#configuration for more details')
 
-    if WOW_REGION == 'eu':
+    if WOW_REGION == '':
         print('Missing World of Warcraft player region. Please refer to https://github.com/JamesIves/discord-wow-armory-bot#configuration for more details')
 
-    if LOCALE == 'en_GB':
+    if LOCALE == '':
         print('Missing locale. Please refer to https://github.com/JamesIves/discord-wow-armory-bot#configuration for more details')
 
-    if DISCORD_BOT_TOKEN == 'MzY2ODkzMzk1Nzg2MDcyMDY1.DLzfog.oaU1HIAjft8xLx7xGS2uDXGs5UQ':
+    if DISCORD_BOT_TOKEN == '':
         print('Missing Discord bot token. Please refer to https://github.com/JamesIves/discord-wow-armory-bot#configuration for more details')
 
     else:
