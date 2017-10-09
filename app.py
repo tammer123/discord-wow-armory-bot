@@ -69,7 +69,7 @@ async def on_message(message):
                 url="https://render-%s.worldofwarcraft.com/character/%s?_%s" % (
                     region, info['thumb'], epoch_time))
             msg.set_footer(
-                text="!armory help | Feedback: https://github.com/JamesIves/discord-wow-armory-bot/issues",
+                text="!armory help",
                 icon_url="https://raw.githubusercontent.com/JamesIves/discord-wow-armory-bot/master/assets/icon.png")
             msg.add_field(
                 name="Character",
@@ -140,7 +140,7 @@ async def on_message(message):
                 url="https://render-%s.worldofwarcraft.com/character/%s" % (
                     region, info['thumb']))
             msg.set_footer(
-                text="!armory help | Feedback: https://github.com/JamesIves/discord-wow-armory-bot/issues",
+                text="!armory help",
                 icon_url="https://github.com/JamesIves/discord-wow-armory-bot/blob/master/assets/icon.png?raw=true")
             msg.add_field(
                 name="Character",
@@ -204,10 +204,6 @@ async def on_message(message):
             # You can also provide an optional region to each query to display players from other WoW regions outside of the bot default, for example EU, US, etc.
             !armory pve <name> <realm> <region>
             !armory pvp <armory-link> <region>
-
-            ```
-            • Bot created by James Ives (jamesives.co.uk)
-            • Feedback, Issues and Source: https://github.com/JamesIves/discord-wow-armory-bot/issues
             """
 
         msg = '%s'.format(message) % re.sub(r'(^[ \t]+|[ \t]+(?=:))', '', msg, flags=re.M)
@@ -216,16 +212,16 @@ async def on_message(message):
 
 @client.event
 async def on_ready():
-    if WOW_API_KEY == '':
+    if WOW_API_KEY == 'ugauvsk23gqa56euhvp3w5beerw3v8aw':
         print('Missing World of Warcraft API key. Please refer to https://github.com/JamesIves/discord-wow-armory-bot#configuration for more details')
 
-    if WOW_REGION == '':
+    if WOW_REGION == 'eu':
         print('Missing World of Warcraft player region. Please refer to https://github.com/JamesIves/discord-wow-armory-bot#configuration for more details')
 
-    if LOCALE == '':
+    if LOCALE == 'en_GB':
         print('Missing locale. Please refer to https://github.com/JamesIves/discord-wow-armory-bot#configuration for more details')
 
-    if DISCORD_BOT_TOKEN == '':
+    if DISCORD_BOT_TOKEN == 'MzY2ODkzMzk1Nzg2MDcyMDY1.DLzfog.oaU1HIAjft8xLx7xGS2uDXGs5UQ':
         print('Missing Discord bot token. Please refer to https://github.com/JamesIves/discord-wow-armory-bot#configuration for more details')
 
     else:
