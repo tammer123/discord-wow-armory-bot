@@ -204,6 +204,7 @@ async def on_message(message):
             # You can also provide an optional region to each query to display players from other WoW regions outside of the bot default, for example EU, US, etc.
             !armory pve <name> <realm> <region>
             !armory pvp <armory-link> <region>
+			```
             """
 
         msg = '%s'.format(message) % re.sub(r'(^[ \t]+|[ \t]+(?=:))', '', msg, flags=re.M)
