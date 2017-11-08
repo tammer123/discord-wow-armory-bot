@@ -204,6 +204,9 @@ async def on_message(message):
             # You can also provide an optional region to each query to display players from other WoW regions outside of the bot default, for example EU, US, etc.
             !armory pve <name> <realm> <region>
             !armory pvp <armory-link> <region>
+			
+			# When entering realm what is 2 words please add '-' sign between not space.
+			e.g. !armory pve munix emerald-dream
 			```
             """
 
